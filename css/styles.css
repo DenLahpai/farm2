@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+:root {
+    --color1: #3c9258;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+.big-logo {
+    text-align: center;
+}
+
+.big-logo > img {
+    width: 30%;
+}
+
+.big-logo > div {
+    font-size: 3em;
+    color: var(--color1);
+}
+
+.language-options {
+    text-align: center;
+}
+
+.language-options > div {
+    text-align: center;
+    display: inline-block;
+}
+
+.language-options > div > ul > li {
+    list-style: none;
+    margin: 12px;
+    text-align: left;
+}
+
+.language-options > div > ul > li > a {
+    color: var(--color1);
+    font-size: 1.5em;
+}
+
+header {
+    padding: 6px;
+    background: silver;
+    color: #FFFFFF;
+}
+
+.wrap-header {
+    display: flex;
+    justify: space-between;
+}
+
+.wrap-header > div {
+    width: 100%;
+    padding: 6px;
+}
+
+.header-left-contents {
+    display: flex;
+}
+
+.header-right-contents {
+    text-align: right;    
+}
+
+.small-logo > a >  img {
+    width: 36px;
+    height: 36px;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.login-button {
+    color: var(--color1);
+    font-weight: bold;
+}
+
+
+.search {
+    display: flex;
+}
+
+.nav-bar-contents > div:not(:first-of-type) {
+    margin-left: 9px;
+}
+
+.form input{
+    border: 3px solid var(--color1);
+    border-radius: 6px 0px 0px 6px;
+    outline: none;
+    padding: 6px;
+    width: 100%;
+}
+
+.search button {
+    width: 39px;
+    height: 36px;
+}
+
+.icon img {
+    width: 39px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.icon-count {
+    position: relative;
+    background: red;
+    float: right;
+    top: 0;
+    right: -3;
+    margin-top: 6px;
+    border-radius: 50%;
+    color: white;
+    padding: 3px;
+}
+
+nav {
+    padding: 12px;
+}
+
+.nav-bar-contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.notif-num {
+    color: red;
+    font-weight: bold;
+}
+
+#login-form {
+    display: none;
+}
+
+.form {
+    text-align: center;
+}
+
+.form-contents > div {
+    margin-bottom: 12px;
+}
+
+.form-contents > div > input {
+    padding: 6px;
+}
+
+.form-contents > div > textarea {
+    resize: vertical;
+    padding: 6px;
+}
+
+.form-contents > div > button {
+    padding: 6px 18px;
+    border-radius: 6px;
+    background: var(--color1);
+    color: white;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+}
+
+.form-contents > div > button:active {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    color: blue;
+}
+
+.form-contents > div > button:disabled {
+    background: silver;
+    color: black;
+}
+
+.lead-banner img {
+    width: 100%;
+}
+
+.main-contents {
+    border: 1px solid silver;
+    border-radius: 6px;
+    margin: 6px;
+}
+
+.title {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    border-top: 1px solid silver;
+    background: var(--color1);
+}
+
+.wrap-footer {
+    display: flex;
+    padding: 12px;
+}
+
+.wrap-footer > div {
+    width: 100%;
+}
+
+.footer-logos {
+    display: flex;
+}
+
+.footer-logos > div:not(:first-of-type) {
+    margin-left: 18px;
+}
+
+.footer-logos > div > img {
+    width: 36px;
+}
+
+.footer-right > div {
+    margin: 12px 6px;
+}
+
+.footer-right > div > a {
+    color: white;
+    text-decoration: none;
+}
+
+.input-error {
+    background: red;
+    color: white;
+}
+
+.message {
+    color: blue;
+}
+
+.error {
+    color: red;
+}
+/*styles for computers */
+@media screen and (min-width: 992px) {
+    .container {
+        margin: 0px 210px;
+    }
+}    

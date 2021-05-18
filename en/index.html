@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="Shortcut icon" href="../img/logo.png"/>
+    <title>Welcome</title>
+</head>
+<body>
+    <!-- container -->
+    <div class="container">
+        <header></header>
+        <nav></nav>
+        <!-- main-contents -->
+        <div class="main-contents">
+        </div>
+        <!-- main-contents ends -->
+    </div>
+    <!-- container ends -->
+    <footer></footer>
+</body>
+<script src="./../js/jquery.js"></script>
+<script src="./../js/main_en.js"></script>
+<script>
+$(document).ready(function () {
+    $.post("./../php/header_en.php", function (data){
+        $("header").html(data);    
+    });
+
+    $.post("./../php/nav_en.php", function (data){
+        $("nav").html(data);
+    });
+
+    $.post("./../php/footer_en.php", function (data) {
+        $("footer").html(data);
+    });
+});
+</script>    
+</html>
