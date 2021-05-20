@@ -6,10 +6,10 @@
         <!-- footer-logos -->
         <div class="footer-logos">
             <div>
-                <img src="./../icons/facebook-logo.png">
+                <a href="https://www.facebook.com"><img src="./../icons/facebook-logo.png"></a>
             </div>
             <div>
-                <img src="./../icons/facebook-logo.png">
+                <a href="https://www.facebook.com"><img src="./../icons/facebook-logo.png"></a>
             </div>
         </div>
         <!-- footer-logos ends -->
@@ -27,7 +27,7 @@
             <a href="career.html">Career</a>
         </div>
         <div>
-            <a href="signup.html">Sigup</a>
+            <a href="signup.html">Sign up</a>
         </div>
     </div>
     <!-- footer-right ends -->   

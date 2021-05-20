@@ -15,11 +15,12 @@
         <nav></nav>
         <!-- main-contents -->
         <div class="main-contents">
+            <section class="ads"></section>
         </div>
         <!-- main-contents ends -->
+        <footer></footer>
     </div>
     <!-- container ends -->
-    <footer></footer>
 </body>
 <script src="./../js/jquery.js"></script>
 <script src="./../js/main_en.js"></script>
@@ -31,6 +32,10 @@ $(document).ready(function () {
 
     $.post("./../php/nav_en.php", function (data){
         $("nav").html(data);
+    });
+
+    $.post("./../php/ad-banner.php", function (data){
+        $(".ads").append(data);
     });
 
     $.post("./../php/footer_en.php", function (data) {

@@ -13,6 +13,10 @@ body {
     background: #FFFFFF;
 }
 
+.container {
+    margin-bottom: 210px;
+}
+
 .big-logo {
     text-align: center;
 }
@@ -84,7 +88,6 @@ header {
     font-weight: bold;
 }
 
-
 .search {
     display: flex;
 }
@@ -98,6 +101,9 @@ header {
     border-radius: 6px 0px 0px 6px;
     outline: none;
     padding: 6px;
+}
+
+.search input {
     width: 100%;
 }
 
@@ -186,7 +192,6 @@ nav {
 .lead-banner img {
     width: 100%;
 }
-
 .main-contents {
     border: 1px solid silver;
     border-radius: 6px;
@@ -197,19 +202,23 @@ nav {
     text-align: center;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+.banner-container {
+    text-align: center;
+}
+
+.banner-container > a > img {
     width: 100%;
-    color: white;
-    border-top: 1px solid silver;
-    background: var(--color1);
 }
 
 .wrap-footer {
+    margin-top: 30px;
+    position: fixed;
+    bottom: 0;
     display: flex;
     padding: 12px;
+    color: white;
+    background: var(--color1);
+    width: 100%;
 }
 
 .wrap-footer > div {
@@ -224,7 +233,7 @@ footer {
     margin-left: 18px;
 }
 
-.footer-logos > div > img {
+.footer-logos > div > a > img {
     width: 36px;
 }
 
@@ -242,6 +251,10 @@ footer {
     color: white;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .message {
     color: blue;
 }
@@ -253,5 +266,9 @@ footer {
 @media screen and (min-width: 992px) {
     .container {
         margin: 0px 210px;
+    }
+
+    .banner-container > a > img {
+        width: 50%;
     }
 }    

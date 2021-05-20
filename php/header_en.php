@@ -26,7 +26,7 @@
     <div class="header-right">
         <!-- header-right-contents -->
         <div class="header-right-contents">
-            <div class="login-button" onclick="Toggle('#login-form');">
+            <div class="login-button pointer" onclick="Toggle('#login-form');">
                 Login
             </div>
         </div>
@@ -43,7 +43,7 @@
                 <h2>Vendor Login</h2>
             </div>
             <div>
-                <input type="text" name="Username" id="Username" placeholder="Username">
+                <input type="text" name="Mobile" id="Mobile" placeholder="Mobile No">
             </div>
             <div>    
                 <input type="password" name="Password" id="Password" placeholer="Password">
@@ -55,7 +55,7 @@
                 You can <a href="signup.html">sign up</a> for a vendor account in order 
                 to sell your products on our online market.
             </div>
-            <div class="response">
+            <div class="login-response">
             </div>
             <div>
                 <a href="forgot-password.html">Forgot Password?</a>

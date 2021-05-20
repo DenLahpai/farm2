@@ -5,17 +5,17 @@ function Toggle (item){
 
 function login () {
     event.preventDefault();
-
-    var Username = $("#Username");
+    
+    var Mobile = $("#Mobile");
     var Password = $("#Password");
     var msg = "";
     
-    Username.removeClass('input-error');
+    Mobile.removeClass('input-error');
     Password.removeClass('input-error');
     var input_error = false;
 
-    if (Username.val() == "" || Username.val() == " ") {
-        Username.addClass('input-error');
+    if (Mobile.val() == "" || Mobile.val() == " ") {
+        Mobile.addClass('input-error');
         input_error = true;
     }
 
@@ -26,7 +26,7 @@ function login () {
 
     if (input_error == false) {
         $.ajax ({
-            url: "./php/login.php",
+            url: "./../php/login.php",
             type: 'post',
             data: $("#login-form").serialize(),
             success: function (data) {
@@ -35,7 +35,8 @@ function login () {
                     window.location.href = 'vendor/index.html';
                 }
                 else {
-                    $(".response .error-message").html(data);
+                    $(".login-response").addClass("error");
+                    $(".login-response").html("Wrong mobile number or password!");
                 }
             }
         });
@@ -49,7 +50,7 @@ function login () {
 
 //function to check whether a variable is numerci
 function is_Numeric (num) {
-    $.post("./php/is_numeric.php", {
+    $.post("./../php/is_numeric.php", {
         num: num
         }, function (data){
             // zero is returned if num is numeric 
@@ -157,11 +158,17 @@ function submitSignupForm () {
 
     if (error == false) {
         $.ajax({
-            url: "./php/signup.php",
+            url: "./../php/signup.php",
             type: "post",
             data: $("#signup-form").serialize(),
             success: function (data) {
-                $(".response").html(data);
+                if (data == 0) {
+                    window.location.href = '';
+                }
+                else {
+                    $(".response").html(data);
+                    $(".response").addClass("error");
+                }
             }
         });
     }

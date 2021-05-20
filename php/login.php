@@ -4,12 +4,12 @@ require_once "handler.php";
 if (isset($_POST)) {
     $db = new Database();
     $stm = "SELECT * FROM Vendors WHERE
-        BINARY Username = :Username AND
+        BINARY Mobile = :Mobile AND
         BINARY Password = :Password
     ;";
     $db->query($stm);
-    $db->bind(":Username", $_POST['Username']);
-    $db->bind(":Password", $_POST['Password']);
+    $db->bind(":Mobile", $_POST['Mobile']);
+    $db->bind(":Password", md5($_POST['Password']));
     $r = $db->rowCount();
     $rows = $db->resultsetArray();
     if ($r == 1) {
@@ -19,6 +19,10 @@ if (isset($_POST)) {
         }
         //Zero is returned for no error
         echo 0;
+    }
+    else {
+        //One is returned for wrong mobile number or password
+        echo 1;
     }
 }     
 

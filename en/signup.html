@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../css/styles.css"/>
+        <link rel="Shortcut Icon" href="./../img/logo.png"/>
+    </head>
+    <body>
+        <!-- container -->
+        <div class="container">
+            <header></header>
+            <!-- main-contents  -->
+            <div class="main-contents">
+                <section class="title">
+                    <h1>
+                        Join Farm Mart
+                    </h1>
+                    <p>Sign up for your vendor account 
+                    which will enable to sell at our online market.</p>
+                </section>
+                <section class="signup form">
+                    <form id="signup-form" method="post" action="#">
+                        <!-- form-contents -->
+                        <div class="form-contents">
+                            <div>
+                                <input type="text" id="Mobile" name="Mobile" placeholder="Mobile No. 09XXXX" onblur="is_Numeric(this.value);" autocomplete="off">
+                            </div>
+                            <div>
+                                <input type="password" id="password1" name="password1" placeholder="Create a password.">
+                                <br>
+                                Must be at least 8 characters.
+                            </div>
+                            <div>
+                                <input type="password" id="password2" name="password2" placeholder="Confirm your password." onblur="checkPasswords();">
+                            </div>
+                            <div class="pswd"></div>
+                            <div>
+                                <input type="radio" id="Mr" name="Title" value="Mr"checked>
+                                <label for="Mr">Mr.</label>
+                                
+                                <input type="radio" id="Mrs" name="Title" value="Mrs">
+                                <label for="Mrs">Mrs.</label>
+                                
+                                <input type="radio" id="Ms" name="Title" value="Ms">
+                                <label for="Ms">Ms.</label>
+                            </div>
+                            <div>
+                                <input type="text" id="Name" name="Name" placeholder="Name">
+                            </div>
+                            <div>
+                                <textarea id="Address" name="Address" placeholder="Address"></textarea>   
+                            </div>
+                            <div>
+                                <input type="text" id="Town" name="Town" placeholder="Town/City">
+                            </div>
+                            <div>
+                                Date of Birth:<br>
+                                <input type="date" id="Dob" Name="Dob">
+                            </div>
+                            <div>
+                                <input type="checkbox" id="agree" name="agree" checked onchange="checkboxChecker();">
+                                I have read and agree to the <a href="#">Terms of Service.</a>
+                            </div>
+                            <div>
+                                <button type="button" id="btn-submit" onclick="submitSignupForm();">Submit</button>
+                            </div>
+                            <div class="response"></div>
+                        </div>
+                        <!-- form-contents ends -->
+                    </form>        
+                </section>
+            </div>
+            <!-- main-contents ends -->
+        </div>
+        <!-- container ends -->
+        <footer></footer>
+    </body>
+    <script src="./../js/jquery.js"></script>
+    <script src="./../js/main_en.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.post("./../php/header_en.php", function (data){
+                $("header").html(data);
+            });
+
+            $.post("./../php/footer_en.php", function (data) {
+                $("footer").html(data);
+            });
+        });
+    </script>
+</html>
